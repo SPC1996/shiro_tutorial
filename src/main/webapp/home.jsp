@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="include.jsp"/>
 <!DOCTYPE html>
 <html>
@@ -10,7 +12,16 @@
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
 </head>
 <body>
-<h1>Hello, world!</h1>
+<p>Hi <shiro:guest>Guest</shiro:guest>
+    <shiro:user>
+        <%
+            request.setAttribute("account", org.apache.shiro.SecurityUtils.getSubject().getPrincipals());
+        %>
+        <c:out value="${account}"/>
+    </shiro:user>!
+    ( <shiro:user><a href="<c:url value="/logout"/>">Log out</a></shiro:user>
+    <shiro:guest><a href="<c:url value="/login.jsp"/>">Log in</a></shiro:guest> )
+</p>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery.js"></script>
