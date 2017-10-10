@@ -36,6 +36,22 @@
     </p>
 </shiro:notAuthenticated>
 
+<h2>Roles</h2>
+<p>
+    Here are the roles you have and don't have. Log out and log back in under different useraccounts to see different
+    roles.
+</p>
+<h3>Roles you have:</h3>
+<p>
+    <shiro:hasRole name="admin">Admin<br/></shiro:hasRole>
+    <shiro:hasRole name="user">User<br/></shiro:hasRole>
+</p>
+<h3>Roles you DON'T have:</h3>
+<p>
+    <shiro:lacksRole name="admin">Admin<br/></shiro:lacksRole>
+    <shiro:lacksRole name="user">User<br/></shiro:lacksRole>
+</p>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
