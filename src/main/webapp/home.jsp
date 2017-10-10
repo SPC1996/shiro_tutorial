@@ -18,10 +18,23 @@
             request.setAttribute("account", org.apache.shiro.SecurityUtils.getSubject().getPrincipals());
         %>
         <c:out value="${account}"/>
-    </shiro:user>!
-    ( <shiro:user><a href="<c:url value="/logout"/>">Log out</a></shiro:user>
-    <shiro:guest><a href="<c:url value="/login.jsp"/>">Log in</a></shiro:guest> )
+    </shiro:user>
+    !(
+    <shiro:user><a href="<c:url value="/logout"/>">Log out</a></shiro:user>
+    <shiro:guest><a href="<c:url value="/login.jsp"/>">Log in</a></shiro:guest>
+    )
 </p>
+<shiro:authenticated>
+    <p>
+        Visit your <a href="<c:url value="/account/index.jsp" />">account page</a>.
+    </p>
+</shiro:authenticated>
+<shiro:notAuthenticated>
+    <p>
+        If you want to access the authenticated-only <a href="<c:url value="/account/index.jsp"/>">account page</a>,
+        you will need to log-in first.
+    </p>
+</shiro:notAuthenticated>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery.js"></script>
