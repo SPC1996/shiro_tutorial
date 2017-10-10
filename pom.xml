@@ -46,18 +46,7 @@
             <version>${shiro.version}</version>
         </dependency>
 
-        <!-- Stormpath support for quick Realm deployment: -->
-        <dependency>
-            <groupId>com.stormpath.shiro</groupId>
-            <artifactId>stormpath-shiro-core</artifactId>
-            <version>0.7.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.stormpath.sdk</groupId>
-            <artifactId>stormpath-sdk-httpclient</artifactId>
-            <version>1.0.4</version>
-            <scope>runtime</scope>
-        </dependency>
+        <!-- Servlet API: -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -69,6 +58,18 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
             <scope>provided</scope>
+        </dependency>
+
+        <!-- Datasource: -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.44</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.2</version>
         </dependency>
     </dependencies>
 
