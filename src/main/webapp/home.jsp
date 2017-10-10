@@ -52,6 +52,12 @@
     <shiro:lacksRole name="user">User<br/></shiro:lacksRole>
 </p>
 
+<h2>Permissions</h2>
+<ul>
+    <li>You may <shiro:lacksPermission name="all"><b>not</b></shiro:lacksPermission> manage all.</li>
+    <li>You may <shiro:lacksPermission name="some"><b>not</b></shiro:lacksPermission> manage user.</li>
+</ul>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
