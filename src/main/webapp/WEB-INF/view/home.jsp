@@ -21,17 +21,17 @@
     </shiro:user>
     !(
     <shiro:user><a href="<c:url value="/logout"/>">Log out</a></shiro:user>
-    <shiro:guest><a href="<c:url value="/login.jsp"/>">Log in</a></shiro:guest>
+    <shiro:guest><a href="<c:url value="/login"/>">Log in</a></shiro:guest>
     )
 </p>
 <shiro:authenticated>
     <p>
-        Visit your <a href="<c:url value="/account/index.jsp" />">account page</a>.
+        Visit your <a href="<c:url value="/account" />">account page</a>.
     </p>
 </shiro:authenticated>
 <shiro:notAuthenticated>
     <p>
-        If you want to access the authenticated-only <a href="<c:url value="/account/index.jsp"/>">account page</a>,
+        If you want to access the authenticated-only <a href="<c:url value="/account/index"/>">account page</a>,
         you will need to log-in first.
     </p>
 </shiro:notAuthenticated>
