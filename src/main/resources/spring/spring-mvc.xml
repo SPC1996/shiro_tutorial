@@ -20,6 +20,8 @@
     <mvc:view-controller path="/login" view-name="login"/>
     <mvc:view-controller path="/unauthorized" view-name="unauthorized"/>
     <mvc:view-controller path="/account" view-name="account/index"/>
+    <mvc:view-controller path="/admin" view-name="admin/index"/>
+    <mvc:view-controller path="/user" view-name="user/index"/>
 
     <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
         <property name="securityManager" ref="securityManager"/>
